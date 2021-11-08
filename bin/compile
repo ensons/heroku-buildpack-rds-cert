@@ -2,11 +2,12 @@
 set -e
 
 URL="https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem"
-DIR="/app/.postgresql/"
+DIR="$1/.postgresql/"
 FILE="root.crt"
 
-echo "Downloading ${URL} to ${DIR}${FILE}"
+echo "Source: ${URL} "
+echo "Target: ${DIR}${FILE}"
 
-mkdir -p DIR
+mkdir -p $DIR
 curl --silent ${URL} > ${DIR}${FILE}
 exit $?
