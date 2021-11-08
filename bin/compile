@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+URL="https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem"
+DIR="/app/.postgresql/"
+FILE="root.crt"
+
+echo "Downloading ${URL} to ${DIR}${FILE}"
+
+mkdir -p DIR
+curl --silent ${URL} > ${DIR}${FILE}
+exit $?
