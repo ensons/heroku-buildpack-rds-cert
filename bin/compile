@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-URL="https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem"
+URL="https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem"
 DIR="$1/.postgresql/"
 FILE="root.crt"
 
